@@ -1,0 +1,97 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #386493;
+    --dark: #535b61;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+}
+
+.text-dark { color: var(--dark); }
+.text-blue { color: var(--blue); }
+.text-end { text-align: right; }
+.text-center { text-align: center; }
+.text-start { text-align: left; }
+.text-bold { font-weight: 800; }
+
+.hr { height: 1px; background: rgba(0, 0, 0, 0.1); }
+.border-bottom { border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.invoice-wrapper {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.invoice {
+    max-width: 850px;
+    margin: auto;
+    background: var(--white);
+    padding: 70px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-height: 920px;
+}
+
+.htr { display: grid; grid-template-columns: repeat(2, 1fr); padding-bottom: 10px; }
+.htr-left { text-align: left; }
+.htr-right { text-align: right; }
+
+.invoice-body {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 600px;
+}
+
+.invoice-body table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.invoice-body td, .invoice-body th {
+    padding: 12px;
+}
+
+.invoice-body tr { border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+.invoice-body thead { background: rgba(0, 0, 0, 0.02); }
+
+.invoice-footer { padding: 30px 0; }
+.invoice-footer p { font-size: 12px; }
+
+.btns { margin-top: 20px; display: flex; justify-content: center; }
+.btn { padding: 3px 9px; color: var(--dark); border: 1px solid rgba(0, 0, 0, 0.1); cursor: pointer; }
+tr{
+    align-items: left;
+}
+@media screen and (max-width: 992px) {
+    .invoice { padding: 40px; }
+}
+
+@media screen and (max-width: 576px) {
+    .htr { grid-template-columns: 1fr; }
+    .htr-right { margin: 12px 0; }
+    .invoice { padding: 28px; }
+    .invoice * { text-align: left; }
+}
+
+@media print {
+    .invoice-wrapper { visibility: visible; width: 100%; position: absolute; left: 0; top: 0; overflow: hidden; }
+    .invoice-body { overflow-x: hidden; }
+    .btns { display: none; }
+}

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(337deg, rgba(157,29,207,1) 32%, rgba(54,11,212,1) 100%);}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(39, 12, 136, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px); /* For Safari */
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.card h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: #fff;
+    background: rgba(130, 106, 251, 0.9);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: rgba(88, 56, 250, 0.9);
+}
+
+.credit {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 1.1rem;
+    color: #707070;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    backdrop-filter: blur(30px);
+
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .credit {
+        font-size: 0.7rem;
+        bottom: 10px;
+        right: 10px;
+    }
+}
